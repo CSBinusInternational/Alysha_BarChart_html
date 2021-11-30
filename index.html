@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <!-- font: Outfit -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&display=swap">
+
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/e2f9659f10.js" crossorigin="anonymous"></script>
+    <title>Titanic Dashboard</title>
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar"> 
+        <h4>Titanic Statistics</h4>
+        <div class="profile">
+            <span class="fas fa-search" style="color: #0e1a35;"></span>
+            <img class="profile-image" src="https://picsum.photos/200/200?random=1">
+            <p class="profile-name">Lorem ipsum</p>
+        </div>
+    </nav>
+
+    <!-- sidebar -->
+    <input type="checkbox" id="toggle">
+    <label class="side-toggle" for="toggle"><span class="fas fa-bars" style="color: #0e1a35;"></span></label>
+    
+    <div class="sidebar">
+        <div class="sidebar-menu">
+            <span class="fas fa-clipboard-list"></span><p>Overview</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-users"></span><p>Passengers</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-chart-line"></span><p>Statistics</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fas fa-cog"></span><p>Settings</p>
+        </div>
+        <div class="sidebar-menu">
+            <span class="fab fa-github" href="https://github.com/alyshapm/GraphEx_HCI_Week7"></span>
+            <p><a href="https://github.com/alyshapm/GraphEx_HCI_Week7" target="_blank">Github</a></p>
+        </div>
+    </div>
+
+    <!-- main dashboard -->
+    <main>
+        <div class="dashboard-container">
+            <!-- 4 cards top -->
+            <!-- https://comparecamp.com/titanic-statistics/ -->
+            <div class="card total1">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Ship statistic</h3>
+                        <p>The total cost of building the RMS Titanic</p>
+                        <h2>$174 million <span>USD</span></h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card total2">
+                <div class="info"> 
+                    <div class="info-detail">
+                        <h3>Passengers</h3>
+                        <p>The number of people abroad, including passengers and crew</p>
+                        <h2>2,223 <span>people</span></h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-anchor"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card total3">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Casualties</h3>
+                        <p>The total number of people lost</p>
+                        <h2>68.2%  <span>of passengers and crew</span></h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-user-slash"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card total4">
+                <div class="info">
+                    <div class="info-detail">
+                        <h3>Survivors</h3>
+                        <p>The total number of rescued survivors</p>
+                        <h2>706 <span>people</span></h2>
+                    </div>
+                    <div class="info-image">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- graphs -->
+            <!-- http://www.coding-dude.com/wp/html5/bar-chart-html/ -->
+            <div class="card graph1">
+                <div class="graph-container">
+                    <div class="legend">
+                        <p><i class="fas fa-square" style="color:#5a87ff;"></i> Survived</p>
+                        <p><i class="fas fa-square" style="color:#f99500;"></i> Deceased</p>
+                    </div>
+                    <h3>Rate of survival, by class</h3>
+                    <table class="graph graph1-visual">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:27.6%" data-float="181 people">
+                                <th scope="row">3</th>
+                                <td><span>13.8%</span></td>
+                            </tr>
+                            <tr style="height:80.6%" data-float="528 people">
+                                <th scope="row">3</th>
+                                <td class="odd"><span>40.3%</span></td>
+                            </tr>
+                            <tr style="height:2%" data-float="119 people">
+                                <th scope="row">2</th>
+                                <td><span>0.09%</span></td>
+                            </tr>
+                            <tr style="height:24%" data-float="158 people">
+                                <th scope="row">2</th>
+                                <td class="odd"><span>12%</span></td>
+                            </tr>
+                            <tr style="height:30.4%" data-float="200 people">
+                                <th scope="row">1</th>
+                                <td><span>15.2%</span></td>
+                            </tr>
+                            <tr style="height:2%" data-float="123 people">
+                                <th scope="row">1</th>
+                                <td class="odd"><span>00.9%</span></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+
+            <div class="card graph2">
+                <div class="graph-container">
+                    <div class="legend">
+                        <p><i class="fas fa-square" style="color:#5a87ff;"></i> Male</p>
+                        <p><i class="fas fa-square" style="color:#f99500;"></i> Female</p>
+                    </div>
+                    <h3>Rate of survival, by gender</h3>
+                    <table class="graph graph2-visual">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:20%" data-float="161 people">
+                                <th scope="row">Survived</th>
+                                <td><span>12.3%</span></td>
+                            </tr>
+                            <tr style="height:42%" data-float="339 people">
+                                <th scope="row">Survived</th>
+                                <td class="odd"><span>25.9%</span></td>
+                            </tr>
+                            <tr style="height:85.25%" data-float="682 people">
+                                <th scope="row">Deceased</th>
+                                <td><span>52.1%</span></td>
+                            </tr>
+                            <tr style="height:16%" data-float="127 people">
+                                <th scope="row">Deceased</th>
+                                <td class="odd"><span>0.09%</span></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>   
+            </div>
+
+            <div class="card mini-graph1">
+                <!-- https://dev.to/cscarpitta/build-a-simple-pie-chart-with-html-and-css-32dn -->
+                <h3>Rate of survival, by gender</h3>
+                <div id="pie-chart-container">
+                    <div id="pie-chart1">
+                        <!-- <div class="label">
+                            <span class="one">1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                        </div> -->
+                    </div>
+                    <div id="legend">
+                        <p data-float2="9.7%"><i class="fas fa-square" style="color: #976AE9;"></i>  Female (deceased)</p>
+                        <p data-float2="25.9%"><i class="fas fa-square" style="color: #B18FEF;"></i>  Female (survived)</p>
+                        <p data-float2="12.3%"><i class="fas fa-square" style="color: #CBB5F4;"></i>  Male (survived)</p>
+                        <p data-float2="52.1%"><i class="fas fa-square" style="color: #E5DAFA;"></i>  Male (deceased)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card graph3">
+                <div class="graph-container">
+                    <div class="legend">
+                        <p><i class="fas fa-square" style="color:#5a87ff;"></i> Female</p>
+                        <p><i class="fas fa-square" style="color:#f99500;"></i> Male</p>
+                    </div>
+                    <h3>Average age by class and gender</h3>
+                    <table class="graph graph3-visual">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:82.2%">
+                                <th scope="row">Class 1</th>
+                                <td><span>37</span></td>
+                            </tr>
+                            <tr style="height:91.1%">
+                                <th scope="row">Class 1</th>
+                                <td class="odd"><span>41</span></td>
+                            </tr>
+                            <tr style="height:60%">
+                                <th scope="row">Class 2</th>
+                                <td><span>27</span></td>
+                            </tr>
+                            <tr style="height:68.8%">
+                                <th scope="row">Class 2</th>
+                                <td class="odd"><span>31</span></td>
+                            </tr>
+                            <tr style="height:48.8%">
+                                <th scope="row">Class 3</th>
+                                <td><span>22</span></td>
+                            </tr>
+                            <tr style="height:57.8%">
+                                <th scope="row">Class 3</th>
+                                <td  class="odd"><span>26</span></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+
+            <div class="card mini-graph2">
+                <h3>Number of embarkment, by port</h3>
+                <div id="pie-chart-container">
+                    <div id="pie-chart2"></div>
+                    <div id="legend">
+                        <p data-float2="9.4%"><i class="fas fa-square" style="color: #976AE9;"></i>  Queenstown</p>
+                        <p data-float2="20.6%"><i class="fas fa-square" style="color: #BA9CF0;"></i>  Cherbourg</p>
+                        <p data-float2="69.8%"><i class="fas fa-square" style="color: #DCCDF8;"></i>  Southhampton</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card graph4">
+                <div class="graph-container">
+                    <h3>Number of embarkment, per port</h3>
+                    <table class="graph graph4-visual">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:91.4%" data-float="914 people">
+                                <th scope="row">Southhampton</th>
+                                <td><span>70.1%</span></td>
+                            </tr>
+                            <tr style="height:27%" data-float="270 people">
+                                <th scope="row">Cherbourg</th>
+                                <td><span>20.7%</span></td>
+                            </tr>
+                            <tr style="height:12.3%" data-float="123 people">
+                                <th scope="row">Queenstown</th>
+                                <td><span>0.09%</span></td>
+                            </tr>
+                            <tr style="height:2%" data-float="2 people">
+                                <th scope="row">Unknown</th>
+                                <td><span>0.0015%</span></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+            
+            <div class="card graph5">
+                <div class="graph-container">
+                    <h3>Average fare by class</h3>
+                    <table class="graph graph5-visual">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:87.5%" data-float="313.18% more expensive than class 1">
+                                <th scope="row">Class 1</th>
+                                <td><span>$87.51</span></td>
+                            </tr>
+                            <tr style="height:21.2%" data-float="59.21% more expensive than class 1">
+                                <th scope="row">Class 2</th>
+                                <td><span>$21.18</span></td>
+                            </tr>
+                            <tr style="height:13.3%" data-float="Face value">
+                                <th scope="row">Class 3</th>
+                                <td><span>$12.30</span></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+
+            <div class="card graph6">
+                <div class="graph-container">
+                    <h3>Number of passengers per class</h3>
+                    <table class="graph graph6-visual">
+                        <thead>
+                            <tr>
+                                <th scope="col">Item</th>
+                                <th scope="col">Percent</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="height:40.4%" data-float="323 passengers">
+                                <th scope="row">Class 1</th>
+                                <td><span>24.7</span></td>
+                            </tr>
+                            <tr style="height:34.6%" data-float="277 passengers">
+                                <th scope="row">Class 2</th>
+                                <td><span>21.2%</span></td>
+                            </tr>
+                            <tr style="height:88.6%" data-float="709 passengers">
+                                <th scope="row">Class 3</th>
+                                <td><span>54.2%</span></td>
+                            </tr>
+                        </tbody>
+                    </table> 
+                </div>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>

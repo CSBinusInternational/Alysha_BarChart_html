@@ -1,0 +1,667 @@
+* {
+  margin: 0 ;
+  padding: 0 ;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  /* background-color: #f4f4fb; */
+  background-color: #f9f9f9;
+}
+
+h2 {
+  font: 18px;
+  padding: 15px 0;
+}
+
+h2 > span {
+  font-size: 14px;
+
+}
+
+a:link, a:visited, a:hover, a:active  {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --------- top nav --------- */
+.navbar {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 55px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  padding-left: 6rem;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.profile{
+  display: flex;
+  width: 32%;
+  max-width: 200px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-image {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-name {
+  font-size: 0.9rem;
+  margin-left: -20px;
+}
+
+/* --------- side toggle --------- */
+
+.side-toggle {
+  position: fixed;
+  z-index: 2;
+  top: 12px;
+  left: 25px;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#toggle {
+  display: none;
+}
+
+.sidebar {
+  position: fixed;
+  height: 100%;
+  width: 200px;
+  left: 0;
+  top: 0;
+  padding: 80px 0 20px 0;
+  color: #fff;
+  background: linear-gradient(#0e1a35, #353F5B);
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.144);
+  animation: animate0 1 0.7s;
+}
+
+@keyframes animate0 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+.sidebar-menu {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px 15px 20px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-menu > span {
+  font-size: 25px;
+  padding-right: 30px;
+}
+
+.sidebar-menu:hover {
+  color: #fff;
+  background-color: #353F5B;
+}
+
+#toggle:checked ~ .sidebar {
+    width: 70px;
+}
+
+#toggle:checked ~ .sidebar .sidebar-menu > p {
+    display: none;
+}
+
+#toggle:checked ~ main {
+  padding: 6rem 2rem 2rem 6rem;
+}
+
+/* --------- main --------- */
+
+main {
+  min-height: 100%;
+  padding: 6rem 1rem 2rem 14rem;
+  color: #201f2b;
+}
+
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 columns */
+  grid-template-rows: auto;
+  gap: 1rem;
+  grid-template-areas: 
+    "total1 total2 total3 total4"
+    "graph1 graph1 graph2 graph2"
+    "mini-graph1 graph3 graph3 mini-graph2"
+    "graph4 graph4 graph5 graph6";
+}
+
+.card {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.total1 {
+  grid-area: total1;
+  background-color: #fff;
+  /* background-color: #2d972e; */
+  color: #182344;
+}
+
+.total2 {
+  grid-area: total2;
+  background-color: #fff;
+  /* background-color: #ffa705; */
+  color: #182344;
+}
+
+.total3 {
+  grid-area: total3;
+  background-color: #fff;
+  /* background-color: #9132bd; */
+  color: #182344;
+}
+
+.total4 {
+  grid-area: total4;
+  background-color: #fff;
+  /* background-color: #15a1fe; */
+  color: #182344;
+}
+
+.graph1 {
+  grid-area: graph1;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.graph2 {
+  grid-area: graph2;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.graph3 {
+  grid-area: graph3;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.graph4 {
+  grid-area: graph4;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.graph5 {
+  grid-area: graph5;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.graph6 {
+  grid-area: graph6;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.mini-graph1 {
+  grid-area: mini-graph1;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+.mini-graph2 {
+  grid-area: mini-graph2;
+  overflow-x: auto;
+  background-color: #fff;
+}
+
+/* ------- total content  ------- */
+
+.info {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-detail h2 {
+    font-size: 24px;
+}
+
+.info-detail p {
+    font-size: 14px;
+}
+
+.info-image {
+  font-size: 4em;
+  margin: auto 0.2em auto 0.1em;
+  /* color: #2d2b98; */
+  color: #c4cad3;
+} 
+
+/* ------- bar graph (general)  ------- */
+
+.graph-container h3 {
+  padding: 1em;
+  font-size: 1em;
+  justify-content: center;
+}
+
+.legend {
+  position: relative;
+  /* right: 2.5em; */
+  float: right;
+  height: auto;
+  width: 15%;
+  /* border: 1px solid #999999;
+  border-radius: 5px; */
+  text-align: center;
+  padding: 5px;
+}
+
+.legend p {
+  position: relative;
+  width: 100%;
+  font-size: 0.7em;
+  margin: 2%;
+  white-space: initial;
+}
+
+.graph {
+	margin-bottom:1em;
+  font:normal 100%/150%;
+}
+
+.graph tbody th {
+	text-align:right;
+}
+
+@supports (display:grid) {
+		.graph {
+			display:block;
+      width:100%;
+      height:400px;
+      object-fit: cover;
+      padding-right: 0.5rem;
+      border: 2px solid transparent; /* makes the graph not scroll for some reason */
+		}
+
+  
+		.graph thead {
+			display:none;
+		}
+
+		.graph tbody {
+			position: relative;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(2em, 1fr));
+			column-gap: 2.5%;
+			align-items:end;
+			height: 100%;
+			margin: 0 2.8em;
+      /* margin:3em 0 1em 2.8em; */
+			/* padding:0 1em; */
+			border-bottom:2px solid rgba(0,0,0,0.5);
+			background:repeating-linear-gradient(
+				180deg,
+				rgba(170,170,170,0.7) 0,
+				rgba(170,170,170,0.7) 1px,
+				transparent 1px,
+				transparent 20%
+			);
+		}
+
+		.graph tbody:before,
+		.graph tbody:after {
+			position: absolute;
+			left: -3.2em;
+			width: 2.8em;
+			text-align: right;
+			font: bold 80%/120%;
+      box-sizing: border-box;
+		}
+
+		.graph tr {
+			position:relative;
+			display:block;
+		}
+
+		.graph tr:hover {
+			z-index:999;
+		}
+
+		.graph th,
+		.graph td {
+			display:block;
+			text-align:center;
+		}
+
+		.graph tbody th {
+			position:absolute;
+      margin-top: 0.4em;
+      left: 50%;
+      top: 100%;
+      transform: translateX(-50%);
+      font-size: 0.7em;
+      text-align: center;
+		}
+
+		.graph tbody th:after {
+			content:"";
+		}
+
+		.graph td { 
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(#5a87ff, #2feaa8);
+			border-radius: 0.5em 0.5em 0 0;
+			transition: background 0.5s;
+      animation: animate 1 1s;
+		}
+
+    .graph .odd {
+      background: linear-gradient(#f68080, #f99500);
+      width: 100%;
+			height: 100%;
+      border-radius: 0.5em 0.5em 0 0;
+			transition: background 0.5s;
+      animation: animate 1 1s; 
+    }
+
+    @keyframes animate { /* for the animation, i'd like it to go down up instead of the otherway, but i have not figured out how*/
+      0% {
+        height: 0;
+      }
+      100% {
+        height: 100%;
+      }
+    }
+
+		.graph tr:hover td {
+			opacity: 0.7;
+		} 
+    
+    .graph tr[data-float]::before {
+      content: attr(data-float);
+      position: absolute;
+      left: 50%;
+      bottom: 105%;
+      font-size: 0.7rem;
+      opacity: 0;
+      transform: translateX(-50%);
+      background: #d3d3d3;
+      padding: 0.2em;
+      border-radius: 3px;
+      transition: opacity 0.3s ease-in-out;
+    }
+    
+    .graph tr[data-float]:hover::before {
+      opacity: 1;
+    }
+    
+
+		.graph td span {
+			overflow:hidden;
+			position:absolute;
+			left:50%;
+			top:50%;
+			width:0;
+			padding:0.5em 0;
+			margin:-1em 0 0;
+			font:normal 85%/120%;
+			font-weight:bold;
+			opacity:0;
+			transition:opacity 0.5s;
+      color:white;
+		}
+
+		.toggleGraph:checked + table td span,
+		.graph tr:hover td span {
+			width:4em;
+			margin-left:-2em;
+			opacity:1;
+		}
+
+	}
+
+
+/* graph 1 */
+.graph1-visual tbody:before { 
+  content:"50%";
+  top:-0.6em;
+}
+.graph1-visual tbody:after {
+  content:"0%";
+  bottom:-0.6em;
+}
+
+/* graph 2 */
+.graph2-visual tbody:before { 
+  content:"800";
+  top:-0.6em;
+}
+.graph2-visual tbody:after { 
+  content:"0";
+  bottom:-0.6em;
+}
+
+/* graph 3 */
+.graph3-visual tbody:before { 
+  content:"45";
+  top:-0.6em;
+}
+.graph3-visual tbody:after { 
+  content:"0";
+  bottom:-0.6em;
+}
+
+/* graph 4 */
+.graph4-visual tbody:before {
+  content:"1000";
+  top:-0.6em;
+}
+.graph4-visual tbody:after { 
+  content:"0";
+  bottom:-0.6em;
+}
+
+/* graph 5 */
+.graph5-visual td { 
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#f68080, #f99500);
+  border-radius: 0.5em 0.5em 0 0;
+  transition: background 0.5s;
+  animation: animate 1 1s;
+}
+.graph5-visual tbody:before {
+  content:"$100";
+  top:-0.6em;
+}
+.graph5-visual tbody:after { 
+  content:"$0";
+  bottom:-0.6em;
+}
+
+/* graph 6 */
+.graph6-visual tbody:before {
+  content:"800";
+  top:-0.6em;
+}
+.graph6-visual tbody:after { 
+  content:"0";
+  bottom:-0.6em;
+}
+
+/* ------- pie chart (general)  ------- */
+
+#pie-chart-container {
+  display: block;
+  position: relative;
+  align-items: center;
+}
+
+#pie-chart-container p {
+  display: table;
+  margin-bottom: 0.5em;
+}
+
+#legend {
+  position: relative;
+  /* margin-left: 20px; */
+  padding: 1em;
+  align-items: center;
+}
+
+#legend p[data-float2]::after {
+  content: attr(data-float2);
+  position: relative;
+  left: 5%;
+  font-size: 0.7rem;
+  opacity: 0;
+  background: #77777734;
+  padding: 0.2em;
+  border-radius: 3px;
+  transition: opacity 0.3s ease-in-out;
+}
+#legend p[data-float2]:hover::after {
+  opacity: 1;
+}
+
+#legend p:hover {
+  opacity: 0.5;
+}
+
+
+/* mini-graph1 */
+#pie-chart1 {
+  position: relative;
+  background: conic-gradient(
+    blue 0.00%, 
+    #E5DAFA 0.00% 52.1%, 
+    #CBB5F4 52.1% 64.4%, 
+    #B18FEF 64.4% 90.3%, 
+    #976AE9 90.3%);
+  border-radius: 50%;
+  width: 15.625em;
+  height: 15.625em;
+  margin: 2em auto 1em auto;
+}
+.mini-graph1 h3 {
+  padding: 1em;
+  font-size: 1em;
+}
+
+/* mini-graph2 */
+#pie-chart2 {
+  position: relative;
+  background: conic-gradient(
+    blue 0.00%, 
+    #DCCDF8 0.00% 69.8%, 
+    #BA9CF0 69.8% 90.4%, 
+    #976AE9 90.4%);
+  border-radius: 50%;
+  width: 15.625em;
+  height: 15.625em;
+  margin: 2em auto 1em auto;
+}
+.mini-graph2 h3 {
+  padding: 1em;
+  font-size: 1em;
+}
+
+/* ------- make responsive ------ */
+
+@media screen and (max-width: 1325px) {
+  #pie-chart1, #pie-chart2 {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .dashboard-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-areas: 
+      "total1 total2"
+      "total3 total4"
+      "graph1 graph1"
+      "graph2 graph2"
+      "mini-graph1 mini-graph2"
+      "graph3 graph3"
+      "graph4 graph4"
+      "graph5 graph6";
+  }
+
+  #pie-chart1, #pie-chart2 {
+    width: 180px;
+    height: 180px;
+  }
+
+}
+
+@media screen and (max-width: 480px) {
+  .profile-name {
+    display: none;
+  }
+  .sidebar {
+    display: none;
+  }
+  main {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  #toggle:checked ~ .sidebar {
+    width: 200px;
+    display: block;
+  }
+
+  #toggle:checked ~ .sidebar .sidebar-menu > p {
+    display: block;
+  }
+
+  #toggle:checked ~ main {
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  .dashboard-container {
+    grid-template-columns: 1fr; /* 1 column */
+    grid-template-areas: 
+    "total1"
+    "total2"
+    "total3"
+    "total4"
+    "graph1"
+    "graph2"
+    "mini-graph1"
+    "graph3"
+    "graph4"
+    "mini-graph2"
+    "graph5"
+    "graph6";
+  }
+
+  #my-pie-chart {
+    width: 150px;
+    height: 150px;
+  }
+}
