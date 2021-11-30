@@ -4,7 +4,8 @@ Alysha Mauldina - 2502005906
 
 Repository for Alysha Maulidina's code in response to HCI graph exercise, containing the HMTL and CSS stylesheet files, storyboards, and the cleaned Titanic XLSX file.
 
-<img src="https://giphy.com/embed/3ufkayJXSc5E47L4qw" width="480" height="270">
+<img src="https://giphy.com/embed/3ufkayJXSc5E47L4qw" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen>
+<p><a href="https://giphy.com/gifs/3ufkayJXSc5E47L4qw">via GIPHY</a></p>
 
 ### Features
   - Responsive dashboard
