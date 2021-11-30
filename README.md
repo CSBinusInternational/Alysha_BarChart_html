@@ -11,6 +11,7 @@ Repository for Alysha Maulidina's code in response to HCI graph exercise, contai
 ### Features
   - Responsive dashboard
   - Minimalistic
+  - Sidebar menu
   - Hoverable information
  
-Reference/learning resources used can be found within the HTML code.
+Reference/learning resources used are embedded in the HTML code.
