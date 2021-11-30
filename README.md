@@ -7,5 +7,6 @@ Repository for Alysha Maulidina's code in response to HCI graph exercise, contai
 Features: 
   - Responsive dashboard
   - Minimalistic
+  - Hoverable information
  
  
