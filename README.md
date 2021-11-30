@@ -9,4 +9,4 @@ Features:
   - Minimalistic
   - Hoverable information
  
- 
+Reference/learning resources used can be found within the HTML code.
