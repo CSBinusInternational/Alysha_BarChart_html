@@ -2,7 +2,7 @@
 
 Alysha Mauldina - 2502005906
 
-Repository for Alysha Maulidina's code in response to HCI graph exercise, containing the HMTL and CSS stylesheet files and storyboard.
+Repository for Alysha Maulidina's code in response to HCI graph exercise, containing the HMTL and CSS stylesheet files, storyboards, and the cleaned Titanic XLSX file.
 
 Features: 
   - Responsive dashboard
