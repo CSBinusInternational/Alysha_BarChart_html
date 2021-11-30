@@ -1,4 +1,4 @@
-# Graph Exercise HCI Week 8
+# Titanic Dashboard - HCI Week 8
 
 Alysha Mauldina - 2502005906 - L1BC
 
