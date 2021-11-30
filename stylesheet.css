@@ -375,7 +375,7 @@ main {
 			background: linear-gradient(#5a87ff, #2feaa8);
 			border-radius: 0.5em 0.5em 0 0;
 			transition: background 0.5s;
-      animation: animate 1 1s;
+      animation: animate 1 2s;
 		}
 
     .graph .odd {
@@ -384,7 +384,7 @@ main {
 			height: 100%;
       border-radius: 0.5em 0.5em 0 0;
 			transition: background 0.5s;
-      animation: animate 1 1s; 
+      animation: animate 1 2s; 
     }
 
     @keyframes animate { /* for the animation, i'd like it to go down up instead of the otherway, but i have not figured out how*/
@@ -491,7 +491,7 @@ main {
   background: linear-gradient(#f68080, #f99500);
   border-radius: 0.5em 0.5em 0 0;
   transition: background 0.5s;
-  animation: animate 1 1s;
+  animation: animate 1 2s;
 }
 .graph5-visual tbody:before {
   content:"$100";
