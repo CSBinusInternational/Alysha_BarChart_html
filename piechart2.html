@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Pie chart 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit&display=swap">
+    <script src="https://kit.fontawesome.com/e2f9659f10.js" crossorigin="anonymous"></script>
+    <style>
+
+        * {
+        margin: 0 ;
+        padding: 0 ;
+        box-sizing: border-box;
+        outline: none;
+        font-family: "Outfit", sans-serif;
+        }
+
+        body {
+        /* background-color: #f4f4fb; */
+        background-color: #f9f9f9;
+        }
+
+        h2 {
+        font: 18px;
+        padding: 15px 0;
+        }
+
+        h2 > span {
+        font-size: 14px;
+
+        }
+
+        a:link, a:visited, a:hover, a:active  {
+        text-decoration: none;
+        color: inherit;
+        }
+
+        /* ------- pie chart (general)  ------- */          
+        #pie-chart-container {
+        display: block;
+        position: relative;
+        align-items: center;
+        }
+
+        #pie-chart-container p {
+        display: table;
+        margin-bottom: 0.5em;
+        }
+
+        #legend {
+        position: relative;
+        /* margin-left: 20px; */
+        padding: 1em;
+        align-items: center;
+        }
+
+        #legend p[data-float2]::after {
+        content: attr(data-float2);
+        position: relative;
+        left: 5%;
+        font-size: 0.7rem;
+        opacity: 0;
+        background: #77777734;
+        padding: 0.2em;
+        border-radius: 3px;
+        transition: opacity 0.3s ease-in-out;
+        }
+        #legend p[data-float2]:hover::after {
+        opacity: 1;
+        }
+
+        #legend p:hover {
+        opacity: 0.5;
+        }
+
+        /* mini-graph2 */
+        #pie-chart2 {
+        position: relative;
+        background: conic-gradient(
+            blue 0.00%, 
+            #DCCDF8 0.00% 69.8%, 
+            #BA9CF0 69.8% 90.4%, 
+            #976AE9 90.4%);
+        border-radius: 50%;
+        width: 15.625em;
+        height: 15.625em;
+        margin: 2em auto 1em auto;
+        }
+        .mini-graph2 h3 {
+        padding: 1em;
+        font-size: 1em;
+        }
+
+        @media screen and (max-width: 1325px) {
+            #pie-chart1, #pie-chart2 {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media screen and (max-width: 980px) {
+            #pie-chart1, #pie-chart2 {
+                width: 180px;
+                height: 180px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            #pie-chart1, #pie-chart2{
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h3>Number of embarkment, by port</h3>
+                <div id="pie-chart-container">
+                    <div id="pie-chart2"></div>
+                    <div id="legend">
+                        <p data-float2="9.4%"><i class="fas fa-square" style="color: #976AE9;"></i>  Queenstown</p>
+                        <p data-float2="20.6%"><i class="fas fa-square" style="color: #BA9CF0;"></i>  Cherbourg</p>
+                        <p data-float2="69.8%"><i class="fas fa-square" style="color: #DCCDF8;"></i>  Southhampton</p>
+                    </div>
+                </div>
+</body>
+</html>

@@ -660,7 +660,7 @@ main {
     "graph6";
   }
 
-  #my-pie-chart {
+  #pie-chart1, #pie-chart2 {
     width: 150px;
     height: 150px;
   }
