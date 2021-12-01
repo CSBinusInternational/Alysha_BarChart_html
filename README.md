@@ -1,8 +1,10 @@
-# Graph Exercise HCI Week 8
+# Titanic Dashboard - HCI Week 8
 
 Alysha Mauldina - 2502005906 - L1BC
 
 Repository for Alysha Maulidina's code in response to HCI graph exercise, containing the HMTL and CSS stylesheet files, storyboards, and the cleaned Titanic XLSX file.
+
+Website can be accessed here: https://alyshapm.github.io/Alysha_BarChart_html/
 
 ### Demo
 
